@@ -32,3 +32,19 @@ public void testAscendingSorting() {
         assertFalse(pattern.matcher("hello@example.com").matches());  // Contains email address
     }
 ```
+
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+
+// ...
+
+String output = "(9) Records Found";
+Pattern pattern = Pattern.compile("\\(([^()]*)\\d[^()]*\\)");
+Matcher matcher = pattern.matcher(output);
+
+if (matcher.find()) {
+    System.out.println("Digit found within parentheses: " + matcher.group(1));  // Output: "9"
+} else {
+    System.out.println("No digit found within parentheses.");
+}
+```
