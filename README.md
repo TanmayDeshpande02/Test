@@ -1,4 +1,4 @@
-```
+```java
 public void testAscendingSorting() {
         // Open the webpage
         driver.get(baseUrl);
@@ -23,6 +23,8 @@ public void testAscendingSorting() {
       @Test
     public void testStringValidation() {
         Pattern pattern = Pattern.compile("^[a-zA-Z\\s\\.,!?'\"]+$");
+
+```
 
         // Test cases:
         assertTrue(pattern.matcher("This is a valid string.").matches());
