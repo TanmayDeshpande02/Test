@@ -1,3 +1,4 @@
+```
 public void testAscendingSorting() {
         // Open the webpage
         driver.get(baseUrl);
@@ -17,3 +18,15 @@ public void testAscendingSorting() {
         // Check if the ASCII values of the first two elements are in ascending order
         assertTrue("First two elements are not sorted in ascending order", firstAsciiValue <= secondAsciiValue);
     }
+
+
+      @Test
+    public void testStringValidation() {
+        Pattern pattern = Pattern.compile("^[a-zA-Z\\s\\.,!?'\"]+$");
+
+        // Test cases:
+        assertTrue(pattern.matcher("This is a valid string.").matches());
+        assertFalse(pattern.matcher("1234").matches());  // Contains numbers
+        assertFalse(pattern.matcher("hello@example.com").matches());  // Contains email address
+    }
+```
